@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Play', sans-serif;
+}
+
+.chat{
+    height: 70vh;
+    width: 80%;
+    max-width: 1000px;
+    background: rgb(241, 241, 247);
+    margin: 2rem auto;
+    padding: 1rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.message-area{
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;   
+    display: flex;
+    flex-direction: column;
+}
+
+#send-message{
+    cursor: pointer;
+    width: 200px;
+    padding: 0.5rem 1rem;
+    background: blue;
+    color: white;
+    border: none;
+    margin-top: 1rem;
+    align-self: flex-end;
+    font-family: 'Play', sans-serif;
+    text-transform: uppercase;
+}
+
+.message{
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    width:80%;
+    max-width: 500px;
+    position: relative;
+}
+
+.incoming{
+    margin-right: auto;
+    background: rgb(165, 165, 250);
+    border-radius: 24px 24px 24px 0;
+}
+
+.my-message{
+    margin-left: auto;
+    background: rgb(162, 199, 248);
+    border-radius: 24px 24px 0 24px;
+}
+
+.delete{
+    cursor: pointer;
+    position: absolute;
+    padding: 0.5rem;
+    background: rgb(219, 223, 253);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    top: 0;    
+}
+
+.delete-left{
+    left: -48px;
+}
+
+.delete-right{
+    right: -48px;
+}
+
+.delete img{
+    width: 16px;
+}
+
+.delete:hover{
+    background: rgb(113, 128, 236);
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+}
