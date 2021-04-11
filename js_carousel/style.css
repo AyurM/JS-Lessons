@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Bodoni Moda", serif;
+}
+
+.container {
+  position: relative;
+  width: 80vw;
+  height: calc(min(80vw, 900px) * 9 / 16);
+  min-width: 400px;
+  min-height: calc(400px * 9 / 16);
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+#main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+button {
+  cursor: pointer;
+  position: absolute;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 0.5rem;
+  top: 50%;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+button img {
+  width: 1.5rem;
+}
+
+#left-arrow {
+  transform: rotate(180deg) translateY(50%);
+}
+
+#right-arrow {
+  right: 0;
+  transform: translateY(-50%);
+}
+
+h2 {
+  position: absolute;
+  text-transform: uppercase;
+  font-size: clamp(2rem, 6vw, 4rem);
+  letter-spacing: 0.4rem;
+  margin: 0;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.6);
+  top: 1rem;
+  left: 1rem;
+}
+
+.dots {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50px;
+  background: black;
+  margin: 0.25rem;
+}
