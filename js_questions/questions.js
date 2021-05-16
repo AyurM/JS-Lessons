@@ -16,7 +16,7 @@ function onArrowClick(i) {
   } else {
     if (index != -1) {
       arrowImages[index].style.transform = "rotate(0deg)";
-      answerDivs[index].style.display = "none";
+      answerDivs[i].style.display = "none";
     }
 
     index = i;

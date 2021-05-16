@@ -1,0 +1,124 @@
+@font-face {
+  font-family: Seaside Resort;
+  src: url("./fonts/SeasideResortNF.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Purple Purse;
+  src: url("./fonts/PurplePurse.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url("./images/background.jpg");
+  background-size: cover;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: "Seaside Resort";
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  letter-spacing: 0.25rem;
+  animation: animHeader 1s ease-out 1;
+  color: #554235;
+  background: url("./images/pink_ribbon.png") no-repeat;
+  background-position-y: center;
+  background-size: contain;
+  padding: 1rem 5rem;
+  margin: auto;
+  height: max-content;
+  width: max-content;
+  text-align: center;
+}
+
+.grid {
+  height: 100%;
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.posters {
+  position: relative;
+}
+
+.posters img {
+  position: absolute;
+  width: 180px;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0.25rem 0.25rem 0.75rem rgba(0, 0, 0, 0.25);
+  top: 0;
+  right: 0;
+  animation: animPosters 1s ease-out 1;
+  transition: transform 0.5s ease-out;
+}
+
+#fallout:hover {
+  transform: scale(1.05) rotate(-15deg) translateX(-40%);
+}
+
+#bioshock {
+  z-index: -1;
+  transform: rotate(5deg);
+}
+
+#fallout:hover ~ #bioshock {
+  transform: scale(1.05) rotate(15deg) translateX(40%);
+}
+
+.sticker {
+  position: absolute;
+  display: grid;
+  place-content: center;
+  width: 14rem;
+  height: 14rem;
+  bottom: 7rem;
+  left: 5rem;
+  background: url("./images/sticker.png");
+  background-size: cover;
+  font-family: "Purple Purse";
+  color: white;
+  font-size: 2rem;
+  animation: animSticker 20s linear infinite;
+}
+
+@keyframes animHeader {
+  from {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animPosters {
+  from {
+    transform: translateY(50vh);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animSticker {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
