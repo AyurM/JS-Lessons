@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --textColor: black;
+  --mainColor: white;
+  --bgColor: rgb(235, 247, 250);
+}
+
+.dark-theme {
+  --textColor: white;
+  --mainColor: rgb(17, 17, 17);
+  --bgColor: rgb(36, 38, 39);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Jost", sans-serif;
+  background: var(--bgColor);
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  padding: 0.5rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.dark-theme header a img {
+  filter: invert(1);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+nav a {
+  padding: 0.5rem 1rem;
+  color: var(--textColor);
+}
+
+nav a:hover {
+  background-color: var(--textColor);
+  color: var(--mainColor);
+}
+
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 1rem auto;
+  background: linear-gradient(rgba(1, 103, 177, 0.6), rgba(1, 103, 177, 0.6)),
+    url(./images/radio_background.jpg);
+  background-size: cover;
+  color: white;
+}
+
+main h1 {
+  font-size: 4rem;
+  margin: 1rem 0 2rem;
+}
+
+main h3 {
+  font-weight: 400;
+  padding: 0.5rem 3rem;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 0, 0, 0.5),
+    transparent
+  );
+  width: max-content;
+}
+
+.on-air {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.buttons {
+  display: flex;
+  align-items: stretch;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+button {
+  cursor: pointer;
+  background: rgb(35, 36, 36);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  font-family: "Jost", sans-serif;
+  display: grid;
+  place-items: center;
+  transition: 0.15s ease-in;
+}
+
+.buttons button img {
+  width: 1rem;
+  height: 1rem;
+  filter: invert(1);
+}
+
+.main-button {
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.25rem;
+}
+
+.main-button span {
+  padding: 0 1.5rem;
+}
+
+button:hover {
+  transform: scale(1.02);
+  box-shadow: 0.25rem 0.25rem 0.75rem rgba(0, 0, 0, 0.25);
+}
+
+section {
+  max-width: 1200px;
+  margin: 4rem auto 3rem;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: var(--textColor);
+}
+
+.tracks {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.track {
+  position: relative;
+  background: var(--mainColor);
+  color: var(--textColor);
+  padding: 1rem;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.2s ease-in;
+}
+
+.track:hover {
+  transform: translateY(-1rem);
+  background: var(--textColor);
+  color: var(--mainColor);
+}
+
+.track img {
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+.artist {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.new {
+  position: absolute;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  background: rgb(185, 35, 35);
+  color: white;
+  right: -0.5rem;
+  top: 0.5rem;
+}
+
+#switch-theme {
+  padding: 0.5rem;
+  border-radius: 50%;
+  margin-left: 1rem;
+}
+
+#switch-theme img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.dark-theme #switch-theme {
+  background-color: white;
+}
