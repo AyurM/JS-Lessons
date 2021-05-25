@@ -159,6 +159,7 @@ section h2 {
 }
 
 .track {
+  cursor: pointer;
   position: relative;
   background: var(--mainColor);
   color: var(--textColor);
